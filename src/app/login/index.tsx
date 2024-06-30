@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  SafeAreaView,
-  Text,
-  Pressable,
-  View,
-  TextInput,
-  ScrollView,
-} from "react-native";
+import { SafeAreaView, Text, Pressable, View, TextInput } from "react-native";
 import { router } from "expo-router";
 
 import GoBack from "@/src/assets/images/back-arrow.svg";
@@ -19,46 +12,46 @@ import styles from "./styles";
 
 export default function Login() {
   return (
-    <ScrollView style={styles.container} bounces={false}>
+    <View style={styles.container}>
       <SafeAreaView style={styles.contentContainer}>
         <View>
-          <Pressable
-            onPress={() => router.back()}
-            style={styles.backArrowContainer}
-          >
-            <GoBack width={23} />
-          </Pressable>
-        </View>
-        <View style={styles.textContainer}>
-          <Text style={styles.title}>Let's sign you in.</Text>
-          <Text style={styles.subtitle}>Welcome back</Text>
-          <Text style={styles.subtitle}>You've been missed!</Text>
-        </View>
-        <View style={styles.textInputContainer}>
-          <PasswordLock width={15} style={styles.passwordIcon} />
-          <TextInput
-            style={styles.input}
-            placeholder="Email, phone or username"
-            placeholderTextColor="#737b89"
-          />
-          <TextInput
-            style={styles.input}
-            placeholder="Password"
-            placeholderTextColor="#737b89"
-            secureTextEntry
-          />
-        </View>
-        <View style={styles.loginMethodsContainer}>
-          <View style={styles.loginMethodsDivider} />
           <View>
-            <Text style={styles.loginMethodsText}>OR</Text>
+            <Pressable
+              onPress={() => router.back()}
+              style={styles.backArrowContainer}
+            >
+              <GoBack width={23} />
+            </Pressable>
           </View>
-          <View style={styles.loginMethodsDivider} />
-        </View>
-        <View style={styles.loginIconsContainer}>
-          <GoogleLogin width={23} height={23} />
-          <FacebookLogin width={23} height={23} />
-          <AppleLogin width={23} height={23} />
+          <View style={styles.textContainer}>
+            <Text style={styles.title}>Let's sign you in.</Text>
+            <Text style={styles.subtitle}>Welcome back</Text>
+            <Text style={styles.subtitle}>You've been missed!</Text>
+          </View>
+          <View style={styles.textInputContainer}>
+            <PasswordLock width={15} style={styles.passwordIcon} />
+            <TextInput
+              style={styles.input}
+              placeholder="Email, phone or username"
+              placeholderTextColor="#737b89"
+            />
+            <TextInput
+              style={styles.input}
+              placeholder="Password"
+              placeholderTextColor="#737b89"
+              secureTextEntry
+            />
+          </View>
+          <View style={styles.loginMethodsContainer}>
+            <View style={styles.loginMethodsDivider} />
+            <Text style={styles.loginMethodsText}>OR</Text>
+            <View style={styles.loginMethodsDivider} />
+          </View>
+          <View style={styles.loginIconsContainer}>
+            <GoogleLogin width={23} height={23} />
+            <FacebookLogin width={23} height={23} />
+            <AppleLogin width={23} height={23} />
+          </View>
         </View>
         <View style={styles.signInOrRegisterContainer}>
           <Text style={styles.noAccountText}>
@@ -70,6 +63,6 @@ export default function Login() {
           </Pressable>
         </View>
       </SafeAreaView>
-    </ScrollView>
+    </View>
   );
 }

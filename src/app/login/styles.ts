@@ -4,9 +4,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#FFFFFF",
+    padding: 30,
   },
   contentContainer: {
-    margin: 30,
+    flex: 1,
+    justifyContent: "space-between",
   },
   backArrowContainer: {
     width: 25,
@@ -32,7 +34,7 @@ const styles = StyleSheet.create({
   passwordIcon: {
     position: "absolute",
     right: 15,
-    top: 45,
+    top: 44,
   },
   input: {
     borderWidth: 1,
@@ -63,11 +65,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     gap: 20,
-    paddingVertical: 20,
+    paddingVertical: 30,
   },
   signInOrRegisterContainer: {
     alignItems: "center",
     gap: 20,
+    width: "100%",
   },
   noAccountText: {
     fontFamily: "SFRegular",
