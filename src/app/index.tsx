@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import { SafeAreaView, Text, StyleSheet } from "react-native";
+import { SafeAreaView, Text, StyleSheet, View } from "react-native";
 
 import { Link, SplashScreen } from "expo-router";
 import { useFonts } from "expo-font";
@@ -22,6 +22,10 @@ export default function Home() {
       await SplashScreen.hideAsync();
     }
   }, [fontsLoaded, fontError]);
+
+  if (!fontsLoaded) {
+    return null; // Você pode retornar um componente de carregamento aqui se preferir
+  }
 
   return (
     <SafeAreaView style={styles.container} onLayout={onLayoutRootView}>
