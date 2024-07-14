@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Platform } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
@@ -14,18 +14,24 @@ const styles = StyleSheet.create({
     width: 25,
     marginBottom: 30,
     borderRadius: 100,
+    paddingTop: Platform.OS === "android" ? 30 : 0,
   },
   textContainer: {
     gap: 15,
     marginBottom: 60,
+    paddingVertical: 0,
   },
   title: {
     fontFamily: "SFBold",
     fontSize: 40,
+    lineHeight: 40,
+    color: "#0F0F0F"
   },
   subtitle: {
     fontFamily: "SFLight",
     fontSize: 30,
+    lineHeight: 30,
+    color: "#0F0F0F"
   },
   textInputContainer: {
     gap: 15,
@@ -78,7 +84,7 @@ const styles = StyleSheet.create({
     color: "#858B98",
   },
   registerText: {
-    color: "#000000",
+    color: "#0F0F0F",
     fontFamily: "SFSemibold",
   },
   signInButtonContainer: {

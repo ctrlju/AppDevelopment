@@ -9,6 +9,7 @@ import AppleLogin from "@/src/assets/images/apple.svg";
 import FacebookLogin from "@/src/assets/images/facebook.svg";
 
 import styles from "./styles";
+import { CreateAlert } from "@/src/components/alert";
 
 export default function Login() {
   return (
@@ -48,17 +49,67 @@ export default function Login() {
             <View style={styles.loginMethodsDivider} />
           </View>
           <View style={styles.loginIconsContainer}>
-            <GoogleLogin width={23} height={23} />
-            <FacebookLogin width={23} height={23} />
-            <AppleLogin width={23} height={23} />
+            <GoogleLogin
+              width={23}
+              height={23}
+              onPress={() =>
+                CreateAlert({
+                  title: "Login with Google",
+                  description: "Login with Google was pressed!",
+                  buttonText: "OK",
+                })
+              }
+            />
+            <FacebookLogin
+              width={23}
+              height={23}
+              onPress={() =>
+                CreateAlert({
+                  title: "Login with Facebook",
+                  description: "Login with Facebook was pressed!",
+                  buttonText: "OK",
+                })
+              }
+            />
+            <AppleLogin
+              width={23}
+              height={23}
+              onPress={() =>
+                CreateAlert({
+                  title: "Login with Apple",
+                  description: "Login with Apple was pressed!",
+                  buttonText: "OK",
+                })
+              }
+            />
           </View>
         </View>
         <View style={styles.signInOrRegisterContainer}>
           <Text style={styles.noAccountText}>
             Don't have an account?{" "}
-            <Text style={styles.registerText}>Register</Text>
+            <Text
+              style={styles.registerText}
+              onPress={() =>
+                CreateAlert({
+                  title: "Register",
+                  description: "Register was pressed!",
+                  buttonText: "OK",
+                })
+              }
+            >
+              Register
+            </Text>
           </Text>
-          <Pressable style={styles.signInButtonContainer}>
+          <Pressable
+            style={styles.signInButtonContainer}
+            onPress={() =>
+              CreateAlert({
+                title: "Sign In",
+                description: "Sign in button was pressed!",
+                buttonText: "OK",
+              })
+            }
+          >
             <Text style={styles.signInButtonText}>Sign In</Text>
           </Pressable>
         </View>
