@@ -1,10 +1,10 @@
 import React, { useCallback } from "react";
-import { SafeAreaView, Text, StyleSheet, View } from "react-native";
+import { SafeAreaView, Text, StyleSheet } from "react-native";
 
 import { Link, SplashScreen } from "expo-router";
 import { useFonts } from "expo-font";
 
-import { screenHeight, screenWidth } from "../helpers/dimensions";
+import { screenWidth } from "../helpers/dimensions";
 
 export default function Home() {
   const [fontsLoaded, fontError] = useFonts({
@@ -24,7 +24,7 @@ export default function Home() {
   }, [fontsLoaded, fontError]);
 
   if (!fontsLoaded) {
-    return null; // Você pode retornar um componente de carregamento aqui se preferir
+    return null;
   }
 
   return (
