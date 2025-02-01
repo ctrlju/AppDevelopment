@@ -29,9 +29,9 @@ export default function Home() {
 
   return (
     <SafeAreaView style={styles.container} onLayout={onLayoutRootView}>
-      <Text style={styles.title}>Screens & Components</Text>
-      <Link href={"/login"} style={styles.links}>
-        Login
+      <Text style={styles.title}>Components</Text>
+      <Link href={"/bottomSheet"} style={styles.links}>
+        Bottom Sheet
       </Link>
     </SafeAreaView>
   );
